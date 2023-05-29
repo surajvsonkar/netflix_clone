@@ -1,0 +1,595 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&')
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    background-color: #000;
+    color: #fff;
+}
+
+/* utilities */
+.container {
+    max-width: 1280px;
+    margin: auto;
+    padding: 0px 3%;
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    h2,h3 {
+        font-size: 18px;
+    }
+}
+
+.header {
+    height: 100vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.8)
+    ), url("https://assets.nflxext.com/ffe/siteui/vlv3/83e8c151-107d-4e8f-b95a-d2ba99d49bb9/7a0bd648-8238-4134-b486-e7ff5cbaa56e/US-en-20230213-popsignuptwoweeks-perspective_alpha_website_large.jpg");
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-position: center;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 0;
+}
+
+.logo {
+    margin-right: auto;
+}
+
+.logo svg {
+    fill: #e50914;
+    height: 40px;
+}
+
+@media screen and (max-width: 600px) {
+    .logo svg {
+        height: 24px;
+    }
+}
+
+.select-box {
+    position: relative;
+}
+
+.select-box svg {
+    height: 20px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+select {
+    display: inline-block;
+    cursor: pointer;display: inline-block;
+    cursor: pointer;
+    font-size: 14px;
+    color: #fff;
+    background: transparent;
+    border: 1px solid #fff;
+    padding: 6px 0px 6px 20px;
+    border-radius: 3px;
+}
+
+select option {
+    color: #000;
+}
+
+.signin-btn {
+    display: inline-block;
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 700;
+    background-color: #e50914;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 3px;
+    margin-left: 20px;
+}
+
+.signin-btn:hover {
+    background-color: #b80f17;
+    transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
+}
+
+/* header content */
+.header-content {
+    height: 65vh;
+    display: grid;
+    place-content: center;
+    text-align: center;
+}
+
+.form-field {
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    .form-field {
+        padding: 0 25px;
+    }
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .form {
+        flex-direction: column;
+    }
+}
+
+.form-group {
+    width: 55%;
+    height: 60px;
+    position: relative;
+}
+
+@media screen and (max-width: 600px) {
+    .form-group {
+        width: 100%;
+    }
+}
+
+.form-input {
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+    color: #222;
+    background-color: #fff;
+    border: 0;
+    border-radius: 5px;
+    padding: 20px 15px
+}
+
+.form-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 15px;
+    padding: 20px 15px;
+    color: #222;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-input:focus + .form-label {
+    top: -12px;
+    left: 0;
+    color: #222;
+    font-size: 12px;
+    z-index: 10;
+}
+
+.form-input:not(:placeholder-shown).form-input:not(:focus) + .form-label {
+    top: -15px;
+    left: 0px;
+    font-size: 12px;
+    z-index: 10;
+}
+
+.get-btn {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 700;
+    padding: 15px 25px;
+    background-color: #e50914;
+    border-radius: 3px;
+    color: #fff;
+    
+    font-size: 14px;
+    color: #fff;
+    background: transparent;
+    border: 1px solid #fff;
+    padding: 6px 0px 6px 20px;
+    border-radius: 3px;
+}
+
+select option {
+    color: #000;
+}
+
+.signin-btn {
+    display: inline-block;
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 700;
+    background-color: #e50914;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 3px;
+    margin-left: 20px;
+}
+
+.signin-btn:hover {
+    background-color: #b80f17;
+    transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
+}
+
+/* header content */
+.header-content {
+    height: 65vh;
+    display: grid;
+    place-content: center;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    .form-field {
+        padding: 0 25px;
+    }
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .form {
+        flex-direction: column;
+    }
+}
+
+.form-group {
+    width: 55%;
+    height: 60px;
+    position: relative;
+}
+
+@media screen and (max-width: 600px) {
+    .form-group {
+        width: 100%;
+    }
+}
+
+.form-input {
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+    color: #222;
+    background-color: #fff;
+    border: 0;
+    border-radius: 5px;
+    padding: 1px 2px
+}
+
+.form-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 15px;
+    padding: 20px 15px;
+    color: #222;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-input:focus + .form-label {
+    top: -12px;
+    left: 0;
+    color: #222;
+    font-size: 12px;
+    z-index: 10;
+}
+
+.form-input:not(:placeholder-shown).form-input:not(:focus) + .form-label {
+    top: -15px;
+    left: 0px;
+    font-size: 12px;
+    z-index: 10;
+}
+
+.get-btn {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 700;
+    padding: 15px 25px;
+    background-color: #e50914;
+    border-radius: 3px;
+    color: #fff;
+    border: 0;
+}
+
+@media screen and (max-width: 600px) {
+    .get-btn {
+        align-self: center;
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+}
+
+.get-btn:hover {
+    background-color: #b80f17;
+    transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
+}
+
+section {
+    padding: 80px 0px;
+    border-top: 8px solid #222;
+}
+
+.section:nth-child(5) {
+    border-bottom: 8px solid #222;
+}
+
+.section-wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+@media screen and (max-width: 960px) {
+    .section-wrap {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.section-content {
+    flex-basis: 50%;
+}
+
+.section-content p {
+    font-size: 24px;
+}
+
+@media screen and (max-width: 600px) {
+    .section-content p {
+        font-size: 18px;
+    }
+}
+
+.section-media {
+    flex-basis: 50%;
+    position: relative;
+}
+
+.section-media img {
+    width: 100%;
+}
+
+.video-div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    overflow: hidden;
+}
+
+.video-1 {
+    max-width: 73%;
+    max-height: 54%;
+    top: 48%;
+    left: 50%;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 600px) {
+    .reverse {
+        flex-direction: column;
+    }
+}
+
+.video-2 {
+    max-width: 63%;
+    max-height: 47%;
+    top: 34%;
+    left: 50%;
+}
+
+.overlay-box {
+    position: absolute;
+    left: 50%;
+    bottom: 8%;
+    transform: translateX(-50%);
+
+    width: 55%;
+    min-width: 240px;
+    margin: 0 auto;
+    padding: 8px 12px;
+    background-color: #000;
+
+    display: flex;
+    align-items: center;
+    border: 2px solid rgba(255,255,255,0.2);
+    box-shadow: 0 0 32px 0 rgb(0 0 0);
+    border-radius: 12px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.overlay-box-img {
+    margin: 0 16px 0 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.overlay-box-img img {
+    height: 80px;
+}
+
+.overlay-box-txt p {
+    font-size: 14px;
+    color: #0071eb;
+}
+
+.download-animation {
+    width: 48px;
+    height: 48px;
+    outline: 2px solid #000;
+    outline-offset: -2px;
+    display: block;
+    content: "";
+    background: url(https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/download-icon.gif) center center no-repeat;
+    background-size: 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.overlay-box-txt {
+    text-align: left;
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin: 5px 0;
+}
+
+/* accordion */
+
+.section-faq {
+    text-align: center;
+}
+
+.accordion {
+    width: 100%;
+    font-size: 24px;
+    margin: 40px 0;
+    text-align: left;
+}
+
+@media screen and (max-width: 600px) {
+    .accordion {
+        font-size: 18px;
+    }
+}
+
+.question {
+    position: relative;
+    background-color: #2d2d2d;
+    margin-bottom: 10px;
+}
+
+.question label:hover {
+    background-color: #444;
+}
+
+@media screen and (max-width: 600px) {
+    .question svg {
+        width: 20px;
+        height: 20px;
+        right: 20px;
+        top: 25px;
+    }
+}
+
+.question svg {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    transition: all .2s ease;
+}
+
+.question .title {
+    display: block;
+    padding: 26px 30px;
+    border-bottom: 1px solid #000;
+    cursor: pointer;
+}
+
+.question .answer {
+    padding: 0px 30px;
+
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+.question .answer p {
+    margin-bottom: 20px;
+}
+
+.question input[type="checkbox"] {
+    display: none;
+}
+
+.question input[type="checkbox"]:checked ~ .answer {
+    max-height: 600px;
+    padding: 24px 30px;
+}
+
+.question input[type="checkbox"]:checked ~ .title svg {
+    transform: rotate(45deg);
+}
+
+/* footer */
+
+.footer {
+    padding: 80px 0px;
+}
+
+.footer a {
+    font-size: 16px;
+    color: rgba(255,255,255,0.7);
+}
+
+.footer .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 20px 0;
+}
+
+@media screen and (max-width: 600px) {
+    .footer .grid-container {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+.footer .grid-container li a {
+    display: block;
+    font-size: 14px;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 15px;
+}
